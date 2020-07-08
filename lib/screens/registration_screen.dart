@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:chat_app/screens/enter_button.dart';
 import 'package:flutter/material.dart';
 import 'input_field.dart';
 
@@ -31,10 +32,20 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 8.0,
             ),
             InputField(hint: 'Enter your email', colour: Colors.blueAccent),
+            SizedBox(
+              height: 10.0,
+            ),
             InputField(
               hint: 'Enter your password',
               colour: Colors.blueAccent,
             ),
+            SizedBox(
+              height: 48.0,
+            ),
+            EnterButton(
+              label: 'Register',
+              colour: Colors.blueAccent,
+            )
           ],
         ),
       ),

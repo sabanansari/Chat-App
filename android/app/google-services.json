@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "757918378716",
+    "firebase_url": "https://chat-app-9cf3b.firebaseio.com",
+    "project_id": "chat-app-9cf3b",
+    "storage_bucket": "chat-app-9cf3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757918378716:android:e1fe4bc4dedf296a76e219",
+        "android_client_info": {
+          "package_name": "co.ansari.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757918378716-6udolnl09at7l31rifa6b45v8dbnirc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgv0XBBLDbsW0-QaOgi24wDqz6aiODfBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757918378716-6udolnl09at7l31rifa6b45v8dbnirc1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
