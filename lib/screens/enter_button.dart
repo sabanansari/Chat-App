@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class EnterButton extends StatelessWidget {
   final String label;
   final Color colour;
+  final Function onPressed;
 
-  EnterButton({this.label, this.colour});
+  EnterButton({this.label, this.colour, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class EnterButton extends StatelessWidget {
         color: colour,
         borderRadius: BorderRadius.circular(200.0),
         child: MaterialButton(
-          onPressed: null,
+          onPressed: onPressed,
           minWidth: 200.0,
           height: 42.0,
           child: Text(label),
