@@ -26,11 +26,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Hero(
-              tag: 'logo',
-              child: Container(
-                height: 200.0,
-                child: Image.asset('images/logo.png'),
+            Flexible(
+              child: Hero(
+                tag: 'logo',
+                child: Container(
+                  height: 200.0,
+                  child: Image.asset('images/logo.png'),
+                ),
               ),
             ),
             SizedBox(
@@ -61,20 +63,19 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               height: 48.0,
             ),
             EnterButton(
-              label: 'Register',
-              colour: Colors.blueAccent,
-              onPressed: ()  async{
-                try{
-               final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
-               if(newUser!=null){
-                 Navigator.pushNamed(context, ChatScreen.id);
-               }
-              }
-              catch(e){
-                print(e);
-                }
-              }
-            )
+                label: 'Register',
+                colour: Colors.blueAccent,
+                onPressed: () async {
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    if (newUser != null) {
+                      Navigator.pushNamed(context, ChatScreen.id);
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
+                })
           ],
         ),
       ),
