@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'enter_button.dart';
-import 'input_field.dart';
+import 'package:chat_app/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
@@ -9,6 +9,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  String email;
+  String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,16 +31,26 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 48.0,
             ),
-            InputField(
-              hint: 'Enter your email',
-              colour: Colors.lightBlueAccent,
+            TextField(
+              keyboardType: TextInputType.emailAddress,
+              onChanged: (value) {
+                email = value;
+              },
+              textAlign: TextAlign.center,
+              decoration:
+                  kTextFieldDecoration.copyWith(hintText: 'Enter the email'),
             ),
             SizedBox(
-              height: 8.0,
+              height: 10.0,
             ),
-            InputField(
-              hint: 'Enter your password',
-              colour: Colors.lightBlueAccent,
+            TextField(
+              obscureText: true,
+              onChanged: (value) {
+                password = value;
+              },
+              textAlign: TextAlign.center,
+              decoration:
+                  kTextFieldDecoration.copyWith(hintText: 'Enter the password'),
             ),
             SizedBox(
               height: 24.0,
